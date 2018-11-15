@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    var a = ["H","E","L","L","O"," ","A","N","H"," ","E","M"];
+    var n="";
+    function fakeArea() {
+          j = document.form.text.value.length;
+        if (j>0)
+        {
+            for (var i=0;i<j;i++){
+                   n = n + a[i];
+                if (i == a.length){
+                    n = ""
+                }
+            }
+        }
+        document.form.text.value = n;
+        n = "";
+        setTimeout("fakeArea()",1);
+
+    }
+</script>
+<body>
+    <center>
+    <h1>Viet gi do cho vui nao!!</h1>
+    <form name="form">
+        <textarea name="text" onkeydown="fakeArea();"></textarea>
+    </form>
+    </center>
+
+</body>
+</html>
